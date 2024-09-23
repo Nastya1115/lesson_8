@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    {%for product in products%}
+
+        <a href= "{% url 'products_page' product.id %}">
+            <b>{{product.name}}</b>
+        </a>
+        <br>
+        {{product.description}}
+        <br><br>
+
+    {%endfor%}
+    
+</body>
+</html>

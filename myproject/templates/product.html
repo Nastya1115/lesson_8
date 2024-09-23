@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <p>
+        <b style="font-size: 30px;">{{product.name}}</b>
+        <br><br>Description: {{product.description}}
+        <br><br><b style="font-size: 20px;">Price: {{product.price}}</b>
+    </p>
+
+    <hr>
+    
+    <p>
+        <b style="font-size: 30px;">Reviews</b>
+        <br>{% block content %} {% endblock %}
+        {%for review in reviews%}
+        <br><br>
+        <br><b>{{review.author}}</b>
+        <br>{{review.text}}
+        <br>{{review.rating}}
+        {%endfor%}
+    </p>
+    
+</body>
+</html>
