@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <p style="font-size: 30px;font-weight: 600;">Register</p><hr><br>
+
+    <form method="POST">
+        {%csrf_token%}
+    
+        <label for="username-field">Enter your username</label>
+        <input type="text" id="username-field" name="username-field">
+        <br><br>
+        <label for="email-field">Enter your email</label>
+        <input type="email" id="email-field" name="email-field">
+        <br><br>
+        <label for="password-field">Enter your password</label>
+        <input type="password" id="password-field" name="password-field">
+        <br><br>
+        <button type="submit">Register</button> 
+        
+    </form>
+    <p>Have an account? <a href= "{% url 'login_page'%}">Login here!</a></p>
+
+</body>
+</html>

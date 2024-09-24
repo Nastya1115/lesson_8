@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    {%load static%}
+    <link rel="stylesheet" href="{% static 'css/hotel_page.css' %}">
+</head>
+<body>
+
+    <p>{{hotel.name}}</p>
+
+    {%include 'reserve_room.html' %}
+
+    <div>
+        {%for room in rooms%}
+        <a href="{% url 'room_page' room.id %}">{{room.number}}</a>
+        {%endfor%}
+    </div>
+
+</body>
+</html>

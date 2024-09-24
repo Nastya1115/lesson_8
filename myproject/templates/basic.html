@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Welcome {{user}}</h1>
+    <hr>
+    <h2>Hotels list</h2>
+
+    {%for hotel in hotels%}
+    <a href="{% url 'hotel_page' hotel.name %}">  
+        {{hotel.name}}
+    </a>
+    {%endfor%}
+
+</body>
+</html>

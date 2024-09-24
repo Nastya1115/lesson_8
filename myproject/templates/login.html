@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    
+    <p style="font-size: 30px;font-weight: 600;">Login</p><hr><br>
+
+    <form method="POST">
+        {%csrf_token%}
+    
+        <label for="username-field">Enter your username</label>
+        <input type="text" id="username-field" name="username-field">
+        <br><br>
+        <label for="password-field">Enter your password</label>
+        <input type="password" id="password-field" name="password-field">
+        <br><br>
+        <button type="submit">Login</button> 
+        <p>{{help}}</p>
+        
+    </form>
+    <p>Have no account? <a href= "{% url 'register_page'%}">Register here!</a></p>
+
+</body>
+</html>
